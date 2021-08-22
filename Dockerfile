@@ -21,7 +21,7 @@ WORKDIR ${GOPATH}/src/code.gitea.io/gitea
 RUN if [ -n "${GITEA_VERSION}" ]; then git checkout "${GITEA_VERSION}"; fi \
  && make clean build
 
-FROM alpine:3.11
+FROM alpine:latest
 LABEL maintainer="maintainers@gitea.io"
 
 EXPOSE 22 3000
